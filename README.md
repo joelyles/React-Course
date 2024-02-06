@@ -1,3 +1,9 @@
+_This project is based on Dave Gray's React JS course published on youtube. Link to the tutorial can be found below._
+
+[Tutorial Link](https://www.youtube.com/watch?v=RVFAyFWO4go)
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
