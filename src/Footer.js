@@ -1,5 +1,5 @@
 const Footer = () => {
-    const today = new Date();
+        const today = new Date();
 
     return (
         <footer>
