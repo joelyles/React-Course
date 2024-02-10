@@ -1,37 +1,49 @@
 import { useState } from 'react';
+// icons inporded from https://www.npmjs.com/package/react-icons
+import { FaTrashAlt } from 'react-icons/fa'
 
 const Content = () => {
-    const [name, setName] = useState('joe');
-    const [count, setCount] = useState(0);
+    const [items, setItems] = useState([
+      {
+        id: 1,
+        checked: false,
+        item: "milk"
+      },
+      {
+        id: 2,
+        checked: false,
+        item: "flour"
+      },
+      {
+        id: 3,
+        checked: false,
+        item: "almonds"
+      }
+    ]);
     
-    const handleNameChange = () => {
-      const names = ['bilbo', 'andrew', 'joe'];
-      const int = Math.floor(Math.random() * names.length);
-      setName(names[int]);
-  }
-
-  // click events
-
-  const handleClick = () => {
-    setCount(count + 1)
-    console.log(count)
-  }
-  const handleClick2 = (name) => {
-    console.log(`${name} was clicked`)
-  }
-  const handleClick3 = (e) => {
-    console.log(e.target.innerText)
-  }
+    const handleCheck = (id) => {
+      const listItems = items.map((item) => item.id === id ? {...item, checked: !items.checked} : item);
+      setItems(listItems);
+    }
 
     return (
       <main>
-        <p onDoubleClick={handleClick}>   
-          Hello {name}!!      
-        </p>
-        <button onClick={handleNameChange}>Change Name</button>
-        {/* <button onClick={() => handleClick2('Joe')}>Click Here</button> */}
-        <button onClick={handleClick}>Click Here</button>
-        <button onClick={(e) => handleClick3(e)}>Click Here</button>
+        <ul>
+          {items.map((item) => (
+            <li className='item' key={item.id}>
+              <input 
+                type="checkbox" 
+                onChange={() => handleCheck(item.id)}
+                checked={item.checked} 
+              />
+              <label>{item.item}</label>
+              <FaTrashAlt 
+                role="button" 
+                tabIndex="0" 
+              />
+            </li>
+          ))}
+        </ul>
       </main>
     )
 };
