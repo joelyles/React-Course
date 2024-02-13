@@ -43,11 +43,13 @@ main {
   height: calc(100% - 2px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 2px);
   padding: 0 0.25em;
   background-color: mediumblue;
