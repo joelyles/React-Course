@@ -1,19 +1,24 @@
 {
-    "items": [
-        {
-            "id": 1,
-            "checked": false,
-            "item": "blueberrys"
-        }, 
-        {
-            "id": 2,
-            "checked": false,
-            "item": "carrots"
-        },
-        {
-            "id": 3,
-            "checked": false,
-            "item": "apples"
-        }
-    ]
+  "items": [
+    {
+      "id": "1",
+      "checked": false,
+      "item": "coffee"
+    },
+    {
+      "id": "2",
+      "checked": false,
+      "item": "tuna"
+    },
+    {
+      "id": "21",
+      "checked": false,
+      "item": "grapes"
+    },
+    {
+      "id": "211",
+      "checked": false,
+      "item": "flour"
+    }
+  ]
 }
