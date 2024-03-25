@@ -28,7 +28,6 @@ function App() {
             const response = await fetch(API_URL);
             if (!response.ok) throw Error('did not receive expected data');
             const listItems = await response.json();
-            console.log(listItems);
             setItems(listItems);
             setFetchError(null);
           } catch (err) {
@@ -37,10 +36,11 @@ function App() {
             setIsLoading(false);
           }
         }
+        // simulates loading time for api request
         setTimeout(() => {
           /* (async () => await fetchItems())(); */
           fetchItems();
-        }, 2000)
+        }, 1000)
         
       }, [])
 
